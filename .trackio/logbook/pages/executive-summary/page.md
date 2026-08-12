@@ -5,7 +5,7 @@
 <!-- trackio-cell
 {"type": "markdown", "id": "cell_4b3d4fc6bbba", "created_at": "2026-08-01T06:47:47+00:00", "title": "Executive summary", "pinned": true, "pinned_at": "2026-08-01T06:47:48+00:00"}
 -->
-Claims 1--4 currently have **inconclusive** clean-room local evidence; none is verified or falsified. Claim 5 has a reviewed, scoreable **1-point toy**: a reduced d=1 direct Cai--Li probability-flow execution under its stated K premise. The toy is not a theorem verification/falsification. No author executable was found. These results must not be interpreted as full diffusion-model training reproductions or official claim points. Source and implementation are public at https://github.com/MachineLearning-Nerd/icml26-repro-L5JTAPUdbQ-diffusion-low-dimensional-distributions and the primary paper is https://arxiv.org/abs/2605.30153.
+Claims 1--4 currently have **inconclusive** clean-room local evidence; none is verified or falsified. Claim 5 has a reviewed, scoreable **1-point toy**: a reduced d=1 direct Cai--Li probability-flow execution under its stated K premise. The toy is not a theorem verification/falsification. No author executable was found. These results must not be interpreted as full diffusion-model training reproductions or official claim points. Source and implementation are public at https://github.com/MachineLearning-Nerd/icml26-diffusion-low-dimensional-distributions and the primary paper is https://arxiv.org/abs/2605.30153.
 
 ## Scope & cost
 | | This reproduction | Full replication |

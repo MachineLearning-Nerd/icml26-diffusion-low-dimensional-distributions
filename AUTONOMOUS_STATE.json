@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
   "openreview_id": "L5JTAPUdbQ",
-  "phase": "claim_3_attempt_5_source_clipping_and_C_R_sensitivity_complete_inconclusive",
-  "next_action": "independent_review_claim_3_source_clipping_C_R_sensitivity_before_any_score_or_publication_change",
+  "phase": "documentation_prepared_branch_cleanup_pending",
+  "next_action": "normalize_attribution_rename_branches_publish_and_verify",
   "active_run_ids": [],
   "completed_milestones": [
     "live_duplicate_gate",
@@ -45,6 +45,7 @@
   },
   "last_checkpoint": "2026-08-03T02:33:39+00:00",
   "publication_allowed": false,
+  "github_repository": "https://github.com/MachineLearning-Nerd/icml26-diffusion-low-dimensional-distributions",
   "cpu_feasibility": "Theorem/source audit and finite toy calculations are CPU feasible. Any full diffusion-model training is non-CPU and must be recorded as CPU-infeasible rather than attempted.",
   "claim_2_outcome": {
     "verdict": "inconclusive",
