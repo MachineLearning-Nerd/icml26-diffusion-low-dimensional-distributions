@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
   "openreview_id": "L5JTAPUdbQ",
-  "phase": "documentation_prepared_branch_cleanup_pending",
-  "next_action": "normalize_attribution_rename_branches_publish_and_verify",
+  "phase": "published_and_live_verified",
+  "next_action": "continue_claim_1_new_locally_reviewed_evidence",
   "active_run_ids": [],
   "completed_milestones": [
     "live_duplicate_gate",
@@ -23,7 +23,12 @@
     "claim_5_attempt_3_premise_compliant_1d_cai_toy",
     "claim_2_attempt_3_conditional_proof_dependency_M3_analytic_mixture",
     "claim_3_attempt_4_literal_regularized_estimator_and_executed_controls",
-    "claim_3_attempt_5_source_low_dimensional_clipping_C_R_sensitivity"
+    "claim_3_attempt_5_source_low_dimensional_clipping_C_R_sensitivity",
+    "repository_documentation_complete",
+    "repository_rename_complete",
+    "branch_names_normalized_and_published",
+    "reachable_commit_attribution_normalized",
+    "github_live_state_verified"
   ],
   "failed_attempts": [],
   "claim_attempt_counts": {
@@ -43,7 +48,7 @@
       "outputs/claim1_threshold_stability_1d_toy/SHA256SUMS"
     ]
   },
-  "last_checkpoint": "2026-08-03T02:33:39+00:00",
+  "last_checkpoint": "2026-08-12T22:38:52Z",
   "publication_allowed": false,
   "github_repository": "https://github.com/MachineLearning-Nerd/icml26-diffusion-low-dimensional-distributions",
   "cpu_feasibility": "Theorem/source audit and finite toy calculations are CPU feasible. Any full diffusion-model training is non-CPU and must be recorded as CPU-infeasible rather than attempted.",
@@ -144,7 +149,7 @@
     "official_score": 2,
     "official_maximum_points": 10
   },
-  "last_known_git_commit": "8f6a4918efd63bfd817af4aa4425c49846002a9d",
+  "last_known_git_commit": "e8de13016c6c273284784b1c1fb7dbba305d0725",
   "claim_2_fullscale_checkpoint": {
     "completed": [
       "full t-grid t=.1/.25/.5/1.0 (20,21,20,20 runs)",
@@ -243,5 +248,24 @@
     ],
     "trusted_restore_head": "522a14faa6f77f1e0b04654ac65ce084fc99e0c5",
     "space_action": "none"
+  },
+  "documentation": {
+    "readme": "complete",
+    "status": "complete",
+    "branch_audit": "complete",
+    "citation": "complete",
+    "thank_you_note": "complete",
+    "claim_evidence_ledger": "complete"
+  },
+  "live_verification": {
+    "repository_name": "icml26-diffusion-low-dimensional-distributions",
+    "default_branch": "main",
+    "branch_count": 31,
+    "old_orx_branches_present": false,
+    "old_work_branches_present": false,
+    "quarantine_branches_present": true,
+    "reachable_commit_identity": "MachineLearning-Nerd <37579156+MachineLearning-Nerd@users.noreply.github.com>",
+    "main_commit": "e8de13016c6c273284784b1c1fb7dbba305d0725",
+    "verified_at_utc": "2026-08-12T22:38:52Z"
   }
 }

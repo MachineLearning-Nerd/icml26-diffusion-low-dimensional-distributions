@@ -47,8 +47,18 @@ of the final `main` release.
 | `work/l5-c2-local-proof-dependency-522a14f` | `audit/claim-2-proof-dependency-mixture` | Local Claim 2 conditional proof-dependency mixture audit. |
 
 The 31-branch count includes `main`. The remote symbolic `origin/HEAD` is not a
-branch. After publication, only the clean names above should be visible; no
-`orx/*` branch should remain on GitHub.
+branch. Live verification on 2026-08-12 found exactly these 31 clean names on
+GitHub; no `orx/*` or `work/*` branch remains.
+
+## Publication verification
+
+- [x] Repository renamed to `icml26-diffusion-low-dimensional-distributions`.
+- [x] `main` is the GitHub default branch.
+- [x] All 31 mapped branches are present on GitHub.
+- [x] Superseded `orx/*` and `work/*` branches are absent.
+- [x] Both `quarantine/*` branches remain available for provenance only.
+- [x] Reachable commits resolve to the normalized `MachineLearning-Nerd` identity.
+- [x] README, citation, thank-you note, status ledger, and claim evidence map are published.
 
 ## Attribution policy
 
