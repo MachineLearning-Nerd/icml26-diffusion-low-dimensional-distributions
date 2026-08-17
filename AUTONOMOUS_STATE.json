@@ -1,7 +1,7 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "openreview_id": "L5JTAPUdbQ",
-  "phase": "published_and_live_verified",
+  "phase": "dossier_published_official_2_of_10_claims_1_to_3_inconclusive_claims_4_to_5_toy",
   "next_action": "continue_claim_1_new_locally_reviewed_evidence",
   "active_run_ids": [],
   "completed_milestones": [
@@ -28,7 +28,10 @@
     "repository_rename_complete",
     "branch_names_normalized_and_published",
     "reachable_commit_attribution_normalized",
-    "github_live_state_verified"
+    "github_live_state_verified",
+    "repository_dossier_published",
+    "github_metadata_aligned",
+    "fresh_clone_verifier_passed"
   ],
   "failed_attempts": [],
   "claim_attempt_counts": {
@@ -48,7 +51,7 @@
       "outputs/claim1_threshold_stability_1d_toy/SHA256SUMS"
     ]
   },
-  "last_checkpoint": "2026-08-12T22:38:52Z",
+  "last_checkpoint": "2026-08-17T00:20:34Z",
   "publication_allowed": false,
   "github_repository": "https://github.com/MachineLearning-Nerd/icml26-diffusion-low-dimensional-distributions",
   "cpu_feasibility": "Theorem/source audit and finite toy calculations are CPU feasible. Any full diffusion-model training is non-CPU and must be recorded as CPU-infeasible rather than attempted.",
@@ -255,7 +258,30 @@
     "branch_audit": "complete",
     "citation": "complete",
     "thank_you_note": "complete",
-    "claim_evidence_ledger": "complete"
+    "claim_evidence_ledger": "complete",
+    "claim_evidence_dossier": "CLAIM_EVIDENCE.md",
+    "source_audit": "SOURCE_AUDIT.md",
+    "environment": "ENVIRONMENT.md",
+    "report": "REPORT.md",
+    "branch_companion": "BRANCH_AUDIT.md",
+    "citation_cff": "CITATION.cff",
+    "author_thank_you": "AUTHOR_THANK_YOU.md",
+    "claims_json": "claims.json",
+    "evidence_manifest": "EVIDENCE_MANIFEST.json",
+    "final_verifier": "verify_final.py"
+  },
+  "dossier_publication": {
+    "commit": "a735ccc9e1ad78f7df4f7c60c479885454cf5df1",
+    "commit_message": "docs(audit): publish diffusion low-dimensional dossier",
+    "published_at_utc": "2026-08-17T00:11:59Z",
+    "github_description": "ICML 2026 scoped reproduction audit for Diffusion Models Are Statistically Optimal for Learning Low-Dimensional Multi-Modal Distributions",
+    "github_homepage": "https://arxiv.org/abs/2605.30153",
+    "local_verifier": "FINAL_AUDIT=VERIFIED branches=31 commits=86 claims1-4=inconclusive claims5=toy official=2/10",
+    "fresh_clone_verifier": "FINAL_AUDIT=VERIFIED branches=31 commits=86 claims1-4=inconclusive claims5=toy official=2/10",
+    "fresh_clone_path": "/tmp/icml-diffusion-final-verify.wBI7E3/repo",
+    "fresh_clone_commit": "a735ccc9e1ad78f7df4f7c60c479885454cf5df1",
+    "attribution": "MachineLearning-Nerd <37579156+MachineLearning-Nerd@users.noreply.github.com>",
+    "scientific_release_boundary": "Documentation and provenance are published; no new scientific claim escalation is authorized."
   },
   "live_verification": {
     "repository_name": "icml26-diffusion-low-dimensional-distributions",
@@ -265,7 +291,7 @@
     "old_work_branches_present": false,
     "quarantine_branches_present": true,
     "reachable_commit_identity": "MachineLearning-Nerd <37579156+MachineLearning-Nerd@users.noreply.github.com>",
-    "main_commit": "e8de13016c6c273284784b1c1fb7dbba305d0725",
-    "verified_at_utc": "2026-08-12T22:38:52Z"
+    "main_commit": "a735ccc9e1ad78f7df4f7c60c479885454cf5df1",
+    "verified_at_utc": "2026-08-17T00:20:34Z"
   }
 }
