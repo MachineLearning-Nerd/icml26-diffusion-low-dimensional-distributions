@@ -1,0 +1,22 @@
+cff-version: 1.2.0
+message: "If this audit or its evidence organization is useful, please cite the paper and this repository."
+title: "Diffusion Models Are Statistically Optimal for Learning Low-Dimensional Multi-Modal Distributions: ICML 2026 reproduction audit"
+type: software
+authors:
+  - family-names: Wu
+    given-names: Jingda
+  - family-names: Cai
+    given-names: Changxiao
+repository-code: "https://github.com/MachineLearning-Nerd/icml26-diffusion-low-dimensional-distributions"
+url: "https://arxiv.org/abs/2605.30153"
+date-released: 2026-08-17
+identifiers:
+  - type: arxiv
+    value: "2605.30153"
+    description: "Paper preprint"
+keywords:
+  - diffusion models
+  - score matching
+  - low-dimensional distributions
+  - union of subspaces
+  - ICML 2026

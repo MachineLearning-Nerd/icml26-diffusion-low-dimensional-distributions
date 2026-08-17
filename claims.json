@@ -1,0 +1,116 @@
+{
+  "schema_version": 2,
+  "repository": "MachineLearning-Nerd/icml26-diffusion-low-dimensional-distributions",
+  "paper": {
+    "title": "Diffusion Models Are Statistically Optimal for Learning Low-Dimensional Multi-Modal Distributions",
+    "authors": [
+      "Jingda Wu",
+      "Changxiao Cai"
+    ],
+    "arxiv": "2605.30153",
+    "openreview": "L5JTAPUdbQ"
+  },
+  "interpretation": "contract/live_claims.json is immutable challenge metadata. The statuses here are scoped repository audit outcomes.",
+  "official_rejudge": {
+    "space_sha": "47dad2b9bfe645cb59775632bc894efa9d65a546",
+    "judged_at_utc": "2026-08-02T10:58:24Z",
+    "model": "zai-org/GLM-5.2",
+    "score": 2,
+    "maximum_points": 10,
+    "verdicts": {
+      "1": "inconclusive",
+      "2": "inconclusive",
+      "3": "inconclusive",
+      "4": "toy",
+      "5": "toy"
+    }
+  },
+  "claims": [
+    {
+      "id": "C1",
+      "status": "inconclusive",
+      "paper_claim": "Theorem 2 gives a W1 sampling rate governed by intrinsic dimension.",
+      "production_sources": [
+        "src/claim1_reverse_diffusion.py",
+        "src/claim1_threshold_stability_1d.py"
+      ],
+      "evidence": [
+        "outputs/claim1_reverse_full/summary.json",
+        "outputs/claim1_reverse_full/SHA256SUMS",
+        "outputs/claim1_threshold_stability_1d_toy/PROTOCOL.json",
+        "outputs/claim1_threshold_stability_1d_toy/DERIVATION.md",
+        "outputs/claim1_threshold_stability_1d_toy/summary.json",
+        "outputs/claim1_threshold_stability_1d_toy/SHA256SUMS"
+      ],
+      "scope": "Literal reverse-OU Euler is unstable and an independent d=k=M=1 coupled-integrator fixture fails finite stability tolerances; neither result is a theorem counterexample."
+    },
+    {
+      "id": "C2",
+      "status": "inconclusive",
+      "paper_claim": "Theorem 1 gives a smoothed-score L2 rate governed by intrinsic dimension.",
+      "production_sources": [
+        "src/claim2_fullscale_cleanroom.py",
+        "src/claim2_proof_dependency_mixture.py"
+      ],
+      "evidence": [
+        "outputs/claim2_fullscale_grid/summary.json",
+        "outputs/claim2_controls/summary.json",
+        "outputs/claim2_proof_dependency_mixture/DERIVATION.md",
+        "outputs/claim2_proof_dependency_mixture/proof_checks.json",
+        "outputs/claim2_proof_dependency_mixture/results.csv",
+        "outputs/claim2_proof_dependency_mixture/summary.json",
+        "outputs/claim2_proof_dependency_mixture/SHA256SUMS"
+      ],
+      "scope": "Proof algebra and a recovered-versus-wrong-basis analytic fixture support conditional dependencies, but finite known-label evidence cannot establish the theorem expectation or hidden constants."
+    },
+    {
+      "id": "C3",
+      "status": "inconclusive",
+      "paper_claim": "Assumption 1 uses a union of subspaces, zero intersection mass, component mass, and within-subspace subgaussian tails.",
+      "production_sources": [
+        "src/claim3_non_toy_dependency_audit.py",
+        "src/claim3_literal_uos_estimator.py"
+      ],
+      "evidence": [
+        "outputs/claim3_fullscale/result.json",
+        "outputs/claim3_fullscale/SHA256SUMS",
+        "outputs/claim3_literal_uos_estimator/config.json",
+        "outputs/claim3_literal_uos_estimator/results.csv",
+        "outputs/claim3_literal_uos_estimator/summary.json",
+        "outputs/claim3_literal_uos_estimator/raw_arrays.npz",
+        "outputs/claim3_literal_uos_estimator/SHA256SUMS"
+      ],
+      "scope": "Finite dependency and literal-estimator checks do not prove the universal theorem or falsify the factual assumption statement."
+    },
+    {
+      "id": "C4",
+      "status": "inconclusive",
+      "paper_claim": "The analysis dispenses with ambient density, density lower bounds, Holder smoothness, and global log-concavity.",
+      "production_sources": [
+        "src/claim4_fullscale_weak_regularities.py"
+      ],
+      "evidence": [
+        "outputs/claim4_fullscale/result.json",
+        "outputs/claim4_fullscale/SHA256SUMS"
+      ],
+      "scope": "A literal-scale finite uniform-cube UoS experiment runs outside comparator regularity classes, but one MSE cannot establish a universal result."
+    },
+    {
+      "id": "C5",
+      "status": "toy",
+      "paper_claim": "Prior smooth-density diffusion work has ambient-dimensional sample complexity.",
+      "production_sources": [
+        "src/claim5_prior_work_comparator.py",
+        "src/claim5_cai_premise_1d_toy.py"
+      ],
+      "evidence": [
+        "evidence/claim5_attempt1/prior_sources/SHA256SUMS",
+        "outputs/claim5_cai_premise_1d_toy/PROTOCOL.json",
+        "outputs/claim5_cai_premise_1d_toy/results.csv",
+        "outputs/claim5_cai_premise_1d_toy/summary.json",
+        "outputs/claim5_cai_premise_1d_toy/SHA256SUMS"
+      ],
+      "scope": "Primary-source rate extraction and a direct reduced Cai--Li probability-flow run form a reviewed toy, not exact-TV theorem verification or falsification."
+    }
+  ]
+}

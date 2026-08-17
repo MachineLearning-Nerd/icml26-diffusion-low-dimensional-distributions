@@ -84,6 +84,28 @@ The repository’s local policy is CPU-only (or local GTX 1050); no Hugging Face
 
 The literal-scale diffusion experiments are retained as evidence and are not required for a documentation-only checkout. `scripts/run_full_poster_gates.sh` reproduces the published non-waived Posterly release gates.
 
+## Audit dossier and final-state check
+
+The claim-by-claim production routes, evidence boundaries, and official-score
+provenance are collected in [CLAIM_EVIDENCE.md](CLAIM_EVIDENCE.md). The
+source and sparse-checkout provenance is in [SOURCE_AUDIT.md](SOURCE_AUDIT.md),
+the recorded runtime policy is in [ENVIRONMENT.md](ENVIRONMENT.md), and the
+short release report is in [REPORT.md](REPORT.md).
+
+The machine-readable companion files are [claims.json](claims.json),
+[CITATION.cff](CITATION.cff), [AUTHOR_THANK_YOU.md](AUTHOR_THANK_YOU.md),
+[BRANCH_AUDIT.md](BRANCH_AUDIT.md), and
+[EVIDENCE_MANIFEST.json](EVIDENCE_MANIFEST.json). Run
+
+~~~bash
+python3 verify_final.py
+~~~
+
+to verify the live GitHub branch set, canonical attribution, required files,
+claim-specific summary facts, and the nested SHA-256 evidence manifests. The
+full branch-by-branch historical mapping remains in
+[branch-audit.md](branch-audit.md).
+
 ## Repository map
 
 | Path | Purpose |
