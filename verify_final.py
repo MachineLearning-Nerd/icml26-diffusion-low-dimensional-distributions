@@ -318,7 +318,7 @@ def main() -> None:
         and state.get("official_author_endorsement") is False
         and state.get("live_verification", {}).get("branch_count") == 31
         and state.get("live_verification", {}).get("default_branch") == "main"
-        and state.get("verified_reachable_commits") == 88,
+        and state.get("verified_reachable_commits") == 89,
         "state publication boundary mismatch",
     )
     require(

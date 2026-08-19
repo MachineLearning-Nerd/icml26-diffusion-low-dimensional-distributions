@@ -55,14 +55,15 @@
       "outputs/claim1_threshold_stability_1d_toy/SHA256SUMS"
     ]
   },
-  "last_checkpoint": "2026-08-17T00:20:34Z",
+  "last_checkpoint": "2026-08-19T10:44:39Z",
   "publication_allowed": false,
   "github_repository": "https://github.com/MachineLearning-Nerd/icml26-diffusion-low-dimensional-distributions",
   "attribution": {
     "name": "MachineLearning-Nerd",
     "email": "MachineLearning-Nerd@users.noreply.github.com"
   },
-  "verified_reachable_commits": 88,
+  "verified_reachable_commits": 89,
+  "recovery_bundle_sha256": "b457a8cfa917f50fcd408140c9bead98aaccb542c6d5f8d2282c64d4a14fb2b7",
   "cpu_feasibility": "Theorem/source audit and finite toy calculations are CPU feasible. Any full diffusion-model training is non-CPU and must be recorded as CPU-infeasible rather than attempted.",
   "claim_2_outcome": {
     "verdict": "inconclusive",
@@ -280,15 +281,15 @@
     "final_verifier": "verify_final.py"
   },
   "dossier_publication": {
-    "commit": "a735ccc9e1ad78f7df4f7c60c479885454cf5df1",
-    "commit_message": "docs(audit): publish diffusion low-dimensional dossier",
+    "commit": "84ece1c316ba42e2e3acfea5e8d2ed758a2e86b0",
+    "commit_message": "Standardize diffusion audit state",
     "published_at_utc": "2026-08-17T00:11:59Z",
     "github_description": "ICML 2026 scoped reproduction audit for Diffusion Models Are Statistically Optimal for Learning Low-Dimensional Multi-Modal Distributions",
     "github_homepage": "https://arxiv.org/abs/2605.30153",
-    "local_verifier": "FINAL_AUDIT=VERIFIED branches=31 commits=86 claims1-4=inconclusive claims5=toy official=2/10",
-    "fresh_clone_verifier": "FINAL_AUDIT=VERIFIED branches=31 commits=86 claims1-4=inconclusive claims5=toy official=2/10",
+    "local_verifier": "FINAL_AUDIT=VERIFIED branches=31 commits=88 claims1-4=inconclusive claims5=toy official=2/10",
+    "fresh_clone_verifier": "FINAL_AUDIT=VERIFIED branches=31 commits=88 claims1-4=inconclusive claims5=toy official=2/10",
     "fresh_clone_path": "/tmp/icml-diffusion-final-verify.wBI7E3/repo",
-    "fresh_clone_commit": "a735ccc9e1ad78f7df4f7c60c479885454cf5df1",
+    "fresh_clone_commit": "84ece1c316ba42e2e3acfea5e8d2ed758a2e86b0",
     "attribution": "MachineLearning-Nerd <MachineLearning-Nerd@users.noreply.github.com>",
     "scientific_release_boundary": "Documentation and provenance are published; no new scientific claim escalation is authorized."
   },
@@ -300,7 +301,7 @@
     "old_work_branches_present": false,
     "quarantine_branches_present": true,
     "reachable_commit_identity": "MachineLearning-Nerd <MachineLearning-Nerd@users.noreply.github.com>",
-    "main_commit": "a735ccc9e1ad78f7df4f7c60c479885454cf5df1",
-    "verified_at_utc": "2026-08-17T00:20:34Z"
+    "main_commit": "84ece1c316ba42e2e3acfea5e8d2ed758a2e86b0",
+    "verified_at_utc": "2026-08-19T10:44:39Z"
   }
 }
