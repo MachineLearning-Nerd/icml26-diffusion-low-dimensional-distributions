@@ -66,7 +66,7 @@ Every reachable commit from `main`, the descriptive audit/release branches,
 and the retained quarantine branches is normalized to:
 
 ```text
-MachineLearning-Nerd <37579156+MachineLearning-Nerd@users.noreply.github.com>
+MachineLearning-Nerd <MachineLearning-Nerd@users.noreply.github.com>
 ```
 
 The repository rename and branch cleanup do not change scientific evidence.

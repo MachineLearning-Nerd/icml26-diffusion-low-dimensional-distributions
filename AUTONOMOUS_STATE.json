@@ -1,7 +1,11 @@
 {
   "schema_version": 2,
   "openreview_id": "L5JTAPUdbQ",
-  "phase": "dossier_published_official_2_of_10_claims_1_to_3_inconclusive_claims_4_to_5_toy",
+  "phase": "published_scoped_partial_audit_official_2_of_10",
+  "overall_verdict": "SCOPED_CLAIMS_1_TO_4_INCONCLUSIVE_CLAIM_5_TOY_OFFICIAL_2_OF_10",
+  "publication_boundary": "OFFICIAL_2_OF_10_SCOPED_NO_FULL_REPRODUCTION",
+  "score_claim": false,
+  "official_author_endorsement": false,
   "next_action": "continue_claim_1_new_locally_reviewed_evidence",
   "active_run_ids": [],
   "completed_milestones": [
@@ -54,6 +58,11 @@
   "last_checkpoint": "2026-08-17T00:20:34Z",
   "publication_allowed": false,
   "github_repository": "https://github.com/MachineLearning-Nerd/icml26-diffusion-low-dimensional-distributions",
+  "attribution": {
+    "name": "MachineLearning-Nerd",
+    "email": "MachineLearning-Nerd@users.noreply.github.com"
+  },
+  "verified_reachable_commits": 88,
   "cpu_feasibility": "Theorem/source audit and finite toy calculations are CPU feasible. Any full diffusion-model training is non-CPU and must be recorded as CPU-infeasible rather than attempted.",
   "claim_2_outcome": {
     "verdict": "inconclusive",
@@ -280,7 +289,7 @@
     "fresh_clone_verifier": "FINAL_AUDIT=VERIFIED branches=31 commits=86 claims1-4=inconclusive claims5=toy official=2/10",
     "fresh_clone_path": "/tmp/icml-diffusion-final-verify.wBI7E3/repo",
     "fresh_clone_commit": "a735ccc9e1ad78f7df4f7c60c479885454cf5df1",
-    "attribution": "MachineLearning-Nerd <37579156+MachineLearning-Nerd@users.noreply.github.com>",
+    "attribution": "MachineLearning-Nerd <MachineLearning-Nerd@users.noreply.github.com>",
     "scientific_release_boundary": "Documentation and provenance are published; no new scientific claim escalation is authorized."
   },
   "live_verification": {
@@ -290,7 +299,7 @@
     "old_orx_branches_present": false,
     "old_work_branches_present": false,
     "quarantine_branches_present": true,
-    "reachable_commit_identity": "MachineLearning-Nerd <37579156+MachineLearning-Nerd@users.noreply.github.com>",
+    "reachable_commit_identity": "MachineLearning-Nerd <MachineLearning-Nerd@users.noreply.github.com>",
     "main_commit": "a735ccc9e1ad78f7df4f7c60c479885454cf5df1",
     "verified_at_utc": "2026-08-17T00:20:34Z"
   }

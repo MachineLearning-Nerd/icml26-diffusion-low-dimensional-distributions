@@ -20,6 +20,9 @@ The current official rejudge for the published Trackio Space scored **2/10**: Cl
 
 The official rejudge is authoritative for the score outcome. The local evidence labels describe what was actually reproduced and must not be read as theorem proofs.
 
+Machine-readable overall verdict: `SCOPED_CLAIMS_1_TO_4_INCONCLUSIVE_CLAIM_5_TOY_OFFICIAL_2_OF_10`.
+Publication boundary: `publication_allowed=false` for a complete reproduction or score; this repository publishes a scoped dossier and records the historical official 2/10 rejudge only. `score_claim=false` and `official_author_endorsement=false`.
+
 ## What the paper is doing
 
 The paper studies score-based diffusion sampling for a target distribution supported on a union of (M) linear subspaces in ambient dimension (d), with maximum intrinsic dimension (k). It smooths the target with an Ornstein–Uhlenbeck/ Gaussian-noise process, estimates the time-dependent score with a kernel-based regularized estimator, and inserts that estimator into a reverse OU sampler. The central claim is that the statistical rate depends on (k), not on the ambient (d), while allowing separated multimodal components and only subgaussian tails within each subspace. The authors also compare this rate with prior smooth-density DDPM/DDIM bounds.
@@ -93,6 +96,7 @@ the recorded runtime policy is in [ENVIRONMENT.md](ENVIRONMENT.md), and the
 short release report is in [REPORT.md](REPORT.md).
 
 The machine-readable companion files are [claims.json](claims.json),
+[reproduction_verdicts.json](reproduction_verdicts.json),
 [CITATION.cff](CITATION.cff), [AUTHOR_THANK_YOU.md](AUTHOR_THANK_YOU.md),
 [BRANCH_AUDIT.md](BRANCH_AUDIT.md), and
 [EVIDENCE_MANIFEST.json](EVIDENCE_MANIFEST.json). Run
@@ -127,7 +131,7 @@ The former repository name was `icml26-repro-L5JTAPUdbQ-diffusion-low-dimensiona
 All reachable commits are normalized to:
 
 ```text
-MachineLearning-Nerd <37579156+MachineLearning-Nerd@users.noreply.github.com>
+MachineLearning-Nerd <MachineLearning-Nerd@users.noreply.github.com>
 ```
 
 The quarantined branches are retained for provenance only and are not publication candidates.

@@ -19,6 +19,10 @@ The exact published Space rejudge is the authoritative competition result:
 2/10 total, with C1--C3 inconclusive and C4--C5 toy. No claim is presented
 here as verified or falsified.
 
+Machine-readable overall verdict: `SCOPED_CLAIMS_1_TO_4_INCONCLUSIVE_CLAIM_5_TOY_OFFICIAL_2_OF_10`.
+Publication boundary: `publication_allowed=false`; `score_claim=false` and
+`official_author_endorsement=false`.
+
 ## What is complete
 
 - Paper identity, arXiv/OpenReview links, source hashes, and source inventory

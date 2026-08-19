@@ -5,6 +5,8 @@
 - Live claims / maximum points: 5 / 10
 - Paper: https://arxiv.org/abs/2605.30153
 - GitHub repository: https://github.com/MachineLearning-Nerd/icml26-diffusion-low-dimensional-distributions
+- Overall verdict: `SCOPED_CLAIMS_1_TO_4_INCONCLUSIVE_CLAIM_5_TOY_OFFICIAL_2_OF_10`.
+- Publication boundary: `OFFICIAL_2_OF_10_SCOPED_NO_FULL_REPRODUCTION`; `publication_allowed=false`, `score_claim=false`, and `official_author_endorsement=false`. Machine-readable claim outcomes are in `reproduction_verdicts.json`.
 - Source pin: `evidence/source/arxiv_source.tar` (see SHA256SUMS)
 - Official executable: none found in initial arXiv source audit
 - Compute policy: local CPU/local GTX 1050 only; no HF cpu-upgrade/Jobs/paid compute

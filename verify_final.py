@@ -13,8 +13,11 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent
 CANONICAL = (
     "MachineLearning-Nerd",
-    "37579156+MachineLearning-Nerd@users.noreply.github.com",
+    "MachineLearning-Nerd@users.noreply.github.com",
 )
+EXPECTED_REPOSITORY = "MachineLearning-Nerd/icml26-diffusion-low-dimensional-distributions"
+EXPECTED_OVERALL_VERDICT = "SCOPED_CLAIMS_1_TO_4_INCONCLUSIVE_CLAIM_5_TOY_OFFICIAL_2_OF_10"
+EXPECTED_PUBLICATION_BOUNDARY = "OFFICIAL_2_OF_10_SCOPED_NO_FULL_REPRODUCTION"
 EXPECTED_BRANCHES = {
     "main",
     "audit/baseline-reproduction",
@@ -60,6 +63,8 @@ REQUIRED_PATHS = [
     "AUTHOR_THANK_YOU.md",
     "CITATION.cff",
     "claims.json",
+    "reproduction_verdicts.json",
+    "AUTONOMOUS_STATE.json",
     "EVIDENCE_MANIFEST.json",
     "verify_final.py",
     "contract/contract_manifest.json",
@@ -261,11 +266,64 @@ def main() -> None:
         "unexpected local claim statuses",
     )
     official = claims.get("official_rejudge", {})
+    require(
+        claims.get("repository") == EXPECTED_REPOSITORY
+        and claims.get("overall_verdict") == EXPECTED_OVERALL_VERDICT
+        and claims.get("publication_allowed") is False
+        and claims.get("publication_boundary") == EXPECTED_PUBLICATION_BOUNDARY
+        and claims.get("score_claim") is False
+        and claims.get("official_author_endorsement") is False,
+        "claims publication boundary mismatch",
+    )
     require(official.get("score") == 2, "official score is not 2")
     require(
         official.get("space_sha")
         == "47dad2b9bfe645cb59775632bc894efa9d65a546",
         "official Space SHA mismatch",
+    )
+
+    reproduction = json_file("reproduction_verdicts.json")
+    require(
+        reproduction.get("repository") == EXPECTED_REPOSITORY
+        and reproduction.get("overall_verdict") == EXPECTED_OVERALL_VERDICT
+        and reproduction.get("publication_allowed") is False
+        and reproduction.get("publication_boundary") == EXPECTED_PUBLICATION_BOUNDARY
+        and reproduction.get("score_claim") is False
+        and reproduction.get("official_author_endorsement") is False,
+        "reproduction verdict boundary mismatch",
+    )
+    require(
+        {
+            key: value.get("verdict")
+            for key, value in reproduction.get("verdicts", {}).items()
+        }
+        == {
+            "1": "inconclusive",
+            "2": "inconclusive",
+            "3": "inconclusive",
+            "4": "inconclusive",
+            "5": "toy",
+        },
+        "unexpected reproduction verdicts",
+    )
+
+    state = json_file("AUTONOMOUS_STATE.json")
+    require(
+        state.get("github_repository") == f"https://github.com/{EXPECTED_REPOSITORY}"
+        and state.get("phase") == "published_scoped_partial_audit_official_2_of_10"
+        and state.get("publication_allowed") is False
+        and state.get("overall_verdict") == EXPECTED_OVERALL_VERDICT
+        and state.get("publication_boundary") == EXPECTED_PUBLICATION_BOUNDARY
+        and state.get("score_claim") is False
+        and state.get("official_author_endorsement") is False
+        and state.get("live_verification", {}).get("branch_count") == 31
+        and state.get("live_verification", {}).get("default_branch") == "main"
+        and state.get("verified_reachable_commits") == 88,
+        "state publication boundary mismatch",
+    )
+    require(
+        state.get("attribution", {}).get("email") == CANONICAL[1],
+        "state attribution mismatch",
     )
 
     live_claims = json_file("contract/live_claims.json")
@@ -283,6 +341,30 @@ def main() -> None:
         "47dad2b9bfe645cb59775632bc894efa9d65a546" in status,
         "official Space SHA missing",
     )
+    for marker in (
+        EXPECTED_OVERALL_VERDICT,
+        "reproduction_verdicts.json",
+        "publication_allowed=false",
+        "score_claim=false",
+        "official_author_endorsement=false",
+    ):
+        require(marker in readme, f"README marker missing: {marker}")
+    for marker in (
+        EXPECTED_OVERALL_VERDICT,
+        EXPECTED_PUBLICATION_BOUNDARY,
+        "reproduction_verdicts.json",
+        "publication_allowed=false",
+        "score_claim=false",
+        "official_author_endorsement=false",
+    ):
+        require(marker in status, f"STATUS marker missing: {marker}")
+    report = file_bytes("REPORT.md").decode("utf-8")
+    for marker in (
+        EXPECTED_OVERALL_VERDICT,
+        "publication_allowed=false",
+        "official_author_endorsement=false",
+    ):
+        require(marker in report, f"REPORT marker missing: {marker}")
 
     c1 = json_file("outputs/claim1_reverse_full/summary.json")
     require(c1["protocol"]["d"] == 48 and c1["protocol"]["M"] == 128, "C1 scale mismatch")

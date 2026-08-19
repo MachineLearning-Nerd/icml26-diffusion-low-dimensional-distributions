@@ -67,7 +67,7 @@ their candidate verdicts cannot override main.
 - Exactly two quarantine/* branches remain.
 - main is the GitHub default branch.
 - Reachable author and committer identity is
-  MachineLearning-Nerd <37579156+MachineLearning-Nerd@users.noreply.github.com>.
+  MachineLearning-Nerd <MachineLearning-Nerd@users.noreply.github.com>.
 
 verify_final.py checks these invariants against the live origin, not only
 against local branch names.
